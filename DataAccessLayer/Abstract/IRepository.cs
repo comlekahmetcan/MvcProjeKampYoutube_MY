@@ -13,8 +13,10 @@ namespace DataAccessLayer.Abstract
         void Insert(T p);
         void Delete(T p);
         void Update(T p);
+        T Get(Expression<Func<T, bool>> filter);//id=5 olan yazar dediğimiz için get methodu
+        List<T> List(Expression<Func<T, bool>> filter);//ŞARTLI LİSTELEME METHODLARI--Komple liste geri dönecek
 
-        List<T> List(Expression<Func<T, bool>> filter);//ŞARTLI LİSTELEME METHODLARI
-
+        //Önce Repositoryde T GET gibi tanımlıyoruz sonra genericrepositoryde fonk. dolduruyoruz, oradan categoryservicede tanımlıyoruz getbyid
+        //oradan categorymanager eklediğimiz getbyid methodunu tanımlyıoruz
     }
 }
