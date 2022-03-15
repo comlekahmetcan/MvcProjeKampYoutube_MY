@@ -41,7 +41,7 @@ namespace MvcProjeKamp.Controllers
             ValidationResult results = categoryValidatior.Validate(p);//categoryvalidatior sınıfında olan değerlere göre - validate kontrol et
             if(results.IsValid)
             {
-                cm.CategoryAddBL(p);
+                cm.CategoryAdd(p);
                 return RedirectToAction("GetCategoryList");
             }
             else
