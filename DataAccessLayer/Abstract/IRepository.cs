@@ -16,7 +16,14 @@ namespace DataAccessLayer.Abstract
         T Get(Expression<Func<T, bool>> filter);//id=5 olan yazar dediğimiz için get methodu
         List<T> List(Expression<Func<T, bool>> filter);//ŞARTLI LİSTELEME METHODLARI--Komple liste geri dönecek
 
-        //Önce Repositoryde T GET gibi tanımlıyoruz sonra genericrepositoryde fonk. dolduruyoruz, oradan categoryservicede tanımlıyoruz getbyid
-        //oradan categorymanager eklediğimiz getbyid methodunu tanımlyıoruz
+        //1.işlem - Repositoryde T GET gibi tanımlıyoruz 
+        //2.İşlem - genericrepositoryde fonk. dolduruyoruz, 
+        //3.İşlem - categoryservicede tanımlıyoruz getbyid
+        //4.İşlem - categorymanager eklediğimiz getbyid methodunu tanımlyıoruz
+        //5.İşlem - admincategorycontroller delete actionresult oluşturduk
+        //6.İşlem - index <td><a href="/AdminCategory/DeleteCategory/@item.CategoryID" class="btn btn-danger">Sil</a></td> bu kodu tanımladık
+        //7.İşlem - ıcategoryservice gidip void CategoryDelete(Category category); tanımladık
+        //8.İşlem - categorymanager categorydelete fonksiyonnu dolduruyoruz
+        //9.İşlem - admincategorycontrollere gidip fonksiyona cm.CategoryDelete(categoryvalue); ekledik
     }
 }
