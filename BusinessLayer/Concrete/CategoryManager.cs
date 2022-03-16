@@ -30,6 +30,11 @@ namespace BusinessLayer.Concrete
             _categoryDAL.Delete(category);
         }
 
+        public void CategoryUpdate(Category category)
+        {
+            _categoryDAL.Update(category);
+        }
+
         public Category GetById(int id)
         {
             return _categoryDAL.Get(x => x.CategoryID == id);
